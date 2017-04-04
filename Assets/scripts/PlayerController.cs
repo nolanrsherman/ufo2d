@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
+		rb.freezeRotation = true; //no rotation
 		levelmanager = GameObject.FindObjectOfType<LevelManager> ();
 		numberOfPickups = GameObject.FindGameObjectsWithTag ("pickup").Length;
 	}
@@ -20,10 +21,10 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		float moveHorizontal = Input.GetAxis ("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
-		Vector2 movement = new Vector2 (moveHorizontal, moveVertical);
+		//float moveVertical = Input.GetAxis ("Vertical");// dont need this anymore
+		Vector2 movement = new Vector2 (moveHorizontal, 0);//0 vertical, we only want to move left to right
 		rb.AddForce(movement * speed);
-		LoadNextLevel ();
+		CheckForWin ();
 
 	}
 
@@ -32,9 +33,12 @@ public class PlayerController : MonoBehaviour {
 			other.gameObject.SetActive (false);
 			numberOfPickups--;
 		}
+		if (other.gameObject.CompareTag ("boundry")) {
+			
+		}
 	}
 
-	void LoadNextLevel() {
+	void CheckForWin() {
 		if (numberOfPickups == 0) {
 			levelmanager.LoadWin ();
 		}
