@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour {
 
 	private bool mouseDown = false;
 
-	private int numberOfPickups;
-	private LevelManager levelmanager;
+
+
 
 
 	// Use this for initialization
@@ -24,8 +24,8 @@ public class PlayerController : MonoBehaviour {
 
 		rb = GetComponent<Rigidbody2D>();
 		rb.freezeRotation = true; //no rotation
-		levelmanager = GameObject.FindObjectOfType<LevelManager> ();
-		numberOfPickups = GameObject.FindGameObjectsWithTag ("pickup").Length;
+
+
 	}
 	
 	// Update is called once per frame
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
 		rb.AddForce(movement * speed);
 
 		onClick ();
-		CheckForWin ();
+
 
 	}
 
@@ -53,17 +53,7 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.CompareTag("pickup") ) {
-			other.gameObject.SetActive (false);
-			numberOfPickups--;
-		}
-	}
 
-	void CheckForWin() {
-		if (numberOfPickups == 0) {
-			
-			levelmanager.LoadWin ();
-		} 
-	}
+
+
 }

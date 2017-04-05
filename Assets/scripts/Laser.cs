@@ -18,4 +18,6 @@ public class Laser : MonoBehaviour {
 	public void setSpeed(float speed){
 		this.speed = speed;
 	}
+
+
 }
