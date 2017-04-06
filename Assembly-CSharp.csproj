@@ -46,9 +46,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\LevelManager.cs" />
      <Compile Include="Assets\scripts\CameraController.cs" />
-     <Compile Include="Assets\scripts\PlayerCollision.cs" />
+     <Compile Include="Assets\scripts\DestroyOnCollision.cs" />
+     <Compile Include="Assets\scripts\LaserController.cs" />
+     <Compile Include="Assets\scripts\LevelManager.cs" />
      <Compile Include="Assets\scripts\PlayerController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

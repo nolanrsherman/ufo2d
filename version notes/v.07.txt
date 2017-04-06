@@ -1,0 +1,8 @@
+v.07a0 - Where we left off on 4/6/2017
+
+v.07a1 - CURRENT VERSION
+
+1. Import laser sprite and set up animation. Add to scene.
+2. create a script to handle laser forward momentum.
+3. create reusable collision script, implemented on pickup object.
+

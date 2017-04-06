@@ -1,9 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\LaserController.cs">
     <Files>
-      <File FileName="Assets\PlayerController.cs" Line="29" Column="3" />
-      <File FileName="Assets\CameraController.cs" Line="17" Column="1" />
+      <File FileName="Assets\scripts\CameraController.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\PlayerController.cs" Line="33" Column="3" />
+      <File FileName="Assets\scripts\PlayerCollision.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\CollideWith.cs" Line="9" Column="71" />
+      <File FileName="Assets\scripts\LaserController.cs" Line="21" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
