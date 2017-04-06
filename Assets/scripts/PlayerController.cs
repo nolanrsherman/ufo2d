@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
+		rb.freezeRotation = true;
+
 		levelmanager = GameObject.FindObjectOfType<LevelManager> ();
 		numberOfPickups = GameObject.FindGameObjectsWithTag ("pickup").Length;
 	}
@@ -22,8 +24,8 @@ public class PlayerController : MonoBehaviour {
 		//Handle Input
 
 		float moveHorizontal = Input.GetAxis ("Horizontal");
-		//float moveVertical = Input.GetAxis ("Vertical");
-		Vector2 movement = new Vector2 (moveHorizontal, 0f);
+		float moveVertical = Input.GetAxis ("Vertical");
+		Vector2 movement = new Vector2 (moveHorizontal, moveVertical);
 		rb.AddForce(movement * speed);
 
 		//End Handle Input

@@ -366,9 +366,9 @@ MonoBehaviour:
     height: 420
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 74250000
+    m_SelectedIDs: 52050000
     m_LastClickedID: 0
-    m_ExpandedIDs: a4f8ffff70fbffff00000000
+    m_ExpandedIDs: 54f5ffffe4fbffff000000003a2700005227000064270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -387,7 +387,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
   m_ExpandedScenes:
-  - Start
+  - Game
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -418,14 +418,14 @@ MonoBehaviour:
     width: 897
     height: 420
   m_SceneLighting: 1
-  lastFramingTime: 3810.871286659332
+  lastFramingTime: 1516.228474988474
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.3049369, y: -0.28579766, z: -10}
+    m_Target: {x: 3.3450816, y: 1.4285766, z: 0}
     speed: 2
-    m_Value: {x: 1.3049369, y: -0.28579766, z: -10}
+    m_Value: {x: 3.3450816, y: 1.4285766, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -452,9 +452,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 25.280785
+    m_Target: 40.48104
     speed: 2
-    m_Value: 25.280785
+    m_Value: 40.48104
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -487,16 +487,22 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 256
-    y: 94
-    width: 732
-    height: 391
+    x: 298
+    y: 92
+    width: 897
+    height: 420
   m_ViewPositions:
-    m_KeySerializationHelper: []
-    m_ValueSerializationHelper: []
+    m_KeySerializationHelper:
+    - {fileID: 1107075503197396046, guid: 75963f1f58bb20544871faae519f5905, type: 2}
+    m_ValueSerializationHelper:
+    - {x: 488.2, y: 252.00002}
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 0}
-  m_BreadCrumbs: []
+  m_AnimatorController: {fileID: 9100000, guid: 75963f1f58bb20544871faae519f5905,
+    type: 2}
+  m_BreadCrumbs:
+  - m_Target: {fileID: 1107075503197396046, guid: 75963f1f58bb20544871faae519f5905,
+      type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
   blendTreeGraph: {fileID: 0}
@@ -545,19 +551,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes
+    - Assets/scripts
   m_ViewMode: 1
   m_StartGridSize: 73
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/scripts
   m_LastFoldersGridSize: 73
   m_LastProjectPath: C:\Users\noldr\Documents\unity\ufo-game
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7a250000
-    m_LastClickedID: 9594
-    m_ExpandedIDs: 000000004825000000ca9a3bffffff7f
+    m_SelectedIDs: 4a250000
+    m_LastClickedID: 9546
+    m_ExpandedIDs: 00000000b824000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -585,7 +591,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: deb0ffff
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000048250000
+    m_ExpandedIDs: 00000000b8240000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -613,7 +619,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 34400000000000009e24000032240000
+    m_ExpandedInstanceIDs: 34400000000000009e240000322400001825000078290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
