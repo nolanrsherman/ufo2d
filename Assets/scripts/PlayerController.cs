@@ -6,9 +6,11 @@ public class PlayerController : MonoBehaviour {
 
 	public Rigidbody2D rb;
 	public float speed;
+	public GameObject projectile;
+
 	private int numberOfPickups;
 	private LevelManager levelmanager;
-
+	private bool clickPressed = false;
 
 	// Use this for initialization
 	void Start () {
@@ -20,27 +22,36 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+	void Update(){
+		onClick ();
+	}
+
 	void FixedUpdate () {
 		//Handle Input
-
-		float moveHorizontal = Input.GetAxis ("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
-		Vector2 movement = new Vector2 (moveHorizontal, moveVertical);
-		rb.AddForce(movement * speed);
+		movement();
 
 		//End Handle Input
 		LoadNextLevel ();
 
 	}
 
-	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.CompareTag("pickup") ) {
-			other.gameObject.SetActive (false);
-			numberOfPickups--;
-		}
+	private void onClick(){
+
+		if (Input.GetKeyDown (KeyCode.Mouse0)) {
+			Debug.Log ("mouse clicked");
+			Instantiate (projectile, this.transform);
+		} 
 	}
 
-	void LoadNextLevel() {
+	private void movement(){
+		float moveHorizontal = Input.GetAxis ("Horizontal");
+		float moveVertical = Input.GetAxis ("Vertical");
+		Vector2 movement = new Vector2 (moveHorizontal, moveVertical);
+		rb.AddForce (movement * speed);
+	}
+		
+
+	private void LoadNextLevel() {
 		if (numberOfPickups == 0) {
 			levelmanager.LoadWin ();
 		}
