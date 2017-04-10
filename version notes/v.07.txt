@@ -10,7 +10,8 @@ v.07a2 - CURRENT VERSION
 1. PlayerController.cs - 
 	a. made movement() method and moved code out of fixedUpdate() and put in its own methdo.
 	b. made onClick() method, shoots lazer when mouse is clicked, placed in Update() method.
-	
+	c. onClick uses Instantiate() and the position of the player + offset public vars
+
 2. DestroyCollision.cs -
 	a.change check to other.gameObject.tag instead of .name
 	

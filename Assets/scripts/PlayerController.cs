@@ -10,7 +10,11 @@ public class PlayerController : MonoBehaviour {
 
 	private int numberOfPickups;
 	private LevelManager levelmanager;
-	private bool clickPressed = false;
+
+	public float gun1x = 0;
+	public float gun1y = 0;
+	public float gun2x = 0;
+	public float gun2y = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -39,7 +43,13 @@ public class PlayerController : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.Mouse0)) {
 			Debug.Log ("mouse clicked");
-			Instantiate (projectile, this.transform);
+
+			Vector3 relativePosition = new Vector3(gun1x,gun1y,0);
+			Quaternion rotation = new Quaternion(0f,0f,0f,0f);
+			Instantiate (projectile, this.transform.position + relativePosition, rotation, this.transform);//left gun laser
+
+			relativePosition = new Vector3(gun2x,gun2y,0);
+			Instantiate (projectile, this.transform.position + relativePosition, rotation, this.transform);//Right gun laser
 		} 
 	}
 
